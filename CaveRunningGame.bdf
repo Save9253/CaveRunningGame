@@ -101,7 +101,7 @@ refer to the applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 632 160 808 176)
+	(rect 808 144 984 160)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "outTest[1..0]" (rect 90 0 149 17)(font "Intel Clear" ))
 	(pt 0 8)
@@ -116,7 +116,7 @@ refer to the applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 456 136 632 280)
+	(rect 568 120 744 264)
 	(text "ObstacleGenerator" (rect 5 0 97 12)(font "Arial" ))
 	(text "inst" (rect 8 128 25 140)(font "Arial" ))
 	(port
@@ -165,47 +165,138 @@ refer to the applicable agreement for further details.
 		(rectangle (rect 16 16 160 128))
 	)
 )
-(connector
-	(pt 456 152)
-	(pt 328 152)
-)
-(connector
-	(pt 456 152)
-	(pt 456 168)
-)
-(connector
-	(pt 328 176)
-	(pt 440 176)
-)
-(connector
-	(pt 440 176)
-	(pt 440 184)
-)
-(connector
-	(pt 440 184)
-	(pt 456 184)
-)
-(connector
-	(pt 328 200)
-	(pt 456 200)
-)
-(connector
-	(pt 456 216)
-	(pt 328 216)
-)
-(connector
-	(pt 328 216)
-	(pt 328 224)
-)
-(connector
-	(pt 456 232)
-	(pt 336 232)
-)
-(connector
-	(pt 336 232)
-	(pt 336 248)
+(symbol
+	(rect 384 352 544 464)
+	(text "pulse_10Hz_enable" (rect 5 0 99 12)(font "Arial" ))
+	(text "inst" (rect 8 96 25 108)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 27 35 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "rstn" (rect 0 0 18 12)(font "Arial" ))
+		(text "rstn" (rect 21 43 39 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "ena" (rect 0 0 17 12)(font "Arial" ))
+		(text "ena" (rect 21 59 38 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 160 32)
+		(output)
+		(text "pulse_1Hz" (rect 0 0 50 12)(font "Arial" ))
+		(text "pulse_1Hz" (rect 97 27 147 39)(font "Arial" ))
+		(line (pt 160 32)(pt 144 32))
+	)
+	(drawing
+		(rectangle (rect 16 16 144 96))
+	)
 )
 (connector
 	(pt 336 248)
 	(pt 328 248)
 )
+(connector
+	(pt 376 152)
+	(pt 376 384)
+)
+(connector
+	(pt 384 384)
+	(pt 376 384)
+)
+(connector
+	(pt 384 400)
+	(pt 360 400)
+)
+(connector
+	(pt 328 176)
+	(pt 344 176)
+)
+(connector
+	(pt 344 176)
+	(pt 344 416)
+)
+(connector
+	(pt 384 416)
+	(pt 344 416)
+)
+(connector
+	(pt 544 384)
+	(pt 552 384)
+)
+(connector
+	(pt 360 184)
+	(pt 568 184)
+)
+(connector
+	(pt 328 152)
+	(pt 376 152)
+)
+(connector
+	(pt 376 152)
+	(pt 568 152)
+)
+(connector
+	(pt 360 184)
+	(pt 360 200)
+)
+(connector
+	(pt 360 200)
+	(pt 360 400)
+)
+(connector
+	(pt 328 200)
+	(pt 360 200)
+)
+(connector
+	(pt 744 152)
+	(pt 808 152)
+	(bus)
+)
+(connector
+	(pt 568 168)
+	(pt 552 168)
+)
+(connector
+	(pt 552 168)
+	(pt 552 384)
+)
+(connector
+	(pt 336 248)
+	(pt 336 240)
+)
+(connector
+	(pt 560 216)
+	(pt 560 240)
+)
+(connector
+	(pt 568 216)
+	(pt 560 216)
+)
+(connector
+	(pt 560 240)
+	(pt 336 240)
+)
+(connector
+	(pt 328 224)
+	(pt 520 224)
+)
+(connector
+	(pt 568 200)
+	(pt 520 200)
+)
+(connector
+	(pt 520 200)
+	(pt 520 224)
+)
+(junction (pt 376 152))
+(junction (pt 360 200))
