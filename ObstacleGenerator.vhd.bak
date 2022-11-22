@@ -24,9 +24,8 @@ BEGIN
         If (resetn = '0') then
             state <= 0;
             obstacle <= 0;
-				coinToss <= '0';
         ELSIF (clk'EVENT AND clk = '1') THEN
-			--Tossing a coin on every clock cycle
+
             if (coinToss = '1') then
                 coinToss <='0';
             else
@@ -34,22 +33,21 @@ BEGIN
             end if;
 
             if (enable = '1') then
-                --when enabled the a new obsticle is generated
+
                 if(jump = '1' or duck = '1') then
-                    --if the jump or duck buttons are pressed it will shift the normal sequence
+
                     if(coinToss = '0') then
-                        --if currently the coin is 0 then we will subtract one
                         state <= state - 1;
                     elsif(coinToss ='1') then
-                        --if currently the coin is 1 then we will add 2
                         state <= state + 2;
                     end if;
 
                 else
-                    --if no inputs are pressed then we will add 1
+
                     state <= state + 1;
 
                 end if;
+
             end if;
 
             obstacle <= state;
