@@ -37,7 +37,7 @@
 
 
 set_global_assignment -name FAMILY "Cyclone V"
-set_global_assignment -name DEVICE 5CGXFC7C7F23C8
+set_global_assignment -name DEVICE 5CSEMA5F31C6
 set_global_assignment -name TOP_LEVEL_ENTITY CaveRunningGame
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:34:29  NOVEMBER 21, 2022"
@@ -51,4 +51,24 @@ set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_RO
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
 set_global_assignment -name VHDL_FILE Score.vhd
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_location_assignment PIN_AF14 -to clk
+set_location_assignment PIN_AE12 -to resetn
+set_location_assignment PIN_AD10 -to enable
+set_location_assignment PIN_V16 -to Score[0]
+set_location_assignment PIN_W16 -to Score[1]
+set_location_assignment PIN_V17 -to Score[2]
+set_location_assignment PIN_V18 -to Score[3]
+set_location_assignment PIN_W17 -to Score[4]
+set_location_assignment PIN_W19 -to Score[5]
+set_location_assignment PIN_Y19 -to Score[6]
+set_location_assignment PIN_W20 -to Score[7]
+set_location_assignment PIN_W21 -to Score[8]
+set_location_assignment PIN_Y21 -to Score[9]
+set_location_assignment PIN_AE26 -to PulseOut
+set_global_assignment -name VHDL_FILE VariableCounter.vhd
+set_location_assignment PIN_AB12 -to countTo[0]
+set_location_assignment PIN_AC12 -to countTo[1]
+set_location_assignment PIN_AF9 -to countTo[2]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
