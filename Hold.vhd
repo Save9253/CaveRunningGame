@@ -2,7 +2,7 @@
 -- EE221 - Logic Systems Design I
 -- Saveliy Saunin & Charles Maddrey
 -- Cave Runner Game
--- Varable Counter
+-- Hold
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;

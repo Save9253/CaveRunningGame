@@ -1,0 +1,87 @@
+-- Western Carolina University
+-- EE221 - Logic Systems Design I
+-- Saveliy Saunin & Charles Maddrey
+-- Cave Runner Game
+-- Obstacles
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY Obstacles IS
+
+PORT(
+    clk,enable,resetn,newObstacle : IN STD_LOGIC;
+    spaces : in integer range 0 to 3;
+    hex0, hex1, hex2, hex3, hex4, hex5  : out std_logic_vector (6 downto 0)
+);
+END Obstacles;
+
+ARCHITECTURE ObstaclesTo7Segment OF Obstacles IS
+    signal column0 : std_logic_vector (1 downto 0);
+    signal column1 : std_logic_vector (1 downto 0);
+    signal column2 : std_logic_vector (1 downto 0);
+    signal column3 : std_logic_vector (1 downto 0);
+    signal column4 : std_logic_vector (1 downto 0);
+    signal column5 : std_logic_vector (1 downto 0);
+    signal column6 : std_logic_vector (1 downto 0);
+    signal column7 : std_logic_vector (1 downto 0);
+    signal column8 : std_logic_vector (1 downto 0);
+    signal column9 : std_logic_vector (1 downto 0);
+    signal column10 : std_logic_vector (1 downto 0);
+    signal column11 : std_logic_vector (1 downto 0);
+    signal count : integer range 0 to 4;
+BEGIN
+    PROCESS (clk,resetn,enable)
+    BEGIN
+        If (resetn = '0') then
+            hex0 <= "1111111";
+            hex1 <= "1111111";
+            hex2 <= "1111111";
+            hex3 <= "1111111";
+            hex4 <= "1111111";
+            hex5 <= "1111111";
+            count <= 0;
+        ELSIF (clk'EVENT AND clk = '1') THEN 
+            if (enable = '1') then
+                if ((spaces + 1) = count) then
+                    count <= 0;
+                    if (newObstacle = '1') then
+                        column0 <= "01";
+                    elsif (newObstacle = '0') then
+                        column0 <= "10";
+                    end if;
+                else
+                    count <= count + 1;
+                    column0 <= "11";
+                end if;
+                column1 <= column0;
+
+                column2 <= column1;
+                column3 <= column2;
+
+                column4 <= column3;
+                column5 <= column4;
+
+                column6 <= column5;
+                column7 <= column6;
+                
+
+                column8 <= column7;
+                column9 <= column8;
+
+                column10 <= column9;
+                column11 <= column10;
+                
+            end if;
+
+        END IF;
+    END PROCESS;
+    hex0 <= "1"&column0&"1"&column1&"1";
+    hex1 <= "1"&column2&"1"&column3&"1";
+    hex2 <= "1"&column4&"1"&column5&"1";
+    hex3 <= "1"&column6&"1"&column7&"1";
+    hex4 <= "1"&column8&"1"&column9&"1";
+    hex5 <= "1"&column10&"1"&column11&"1";
+
+
+END ObstaclesTo7Segment;

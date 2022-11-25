@@ -11,20 +11,20 @@ ENTITY ObstacleGenerator IS
 
 PORT(
     clk,enable,resetn,jump,duck : IN STD_LOGIC;
-    obstacle   : out INTEGER RANGE 0 to 3
+    obstacle   : out std_logic
 );
 END ObstacleGenerator;
 
 ARCHITECTURE Randomizer OF ObstacleGenerator IS
-    signal state  : integer range 0 to 3;
+    signal state  : std_logic;
     signal coinToss: std_logic;
 BEGIN
     PROCESS (clk,resetn,enable)
     BEGIN
         If (resetn = '0') then
-            state <= 0;
-            obstacle <= 0;
-				coinToss <= '0';
+            state <= '0';
+            obstacle <= '0';
+			coinToss <= '0';
         ELSIF (clk'EVENT AND clk = '1') THEN
 			--Tossing a coin on every clock cycle
             if (coinToss = '1') then
@@ -38,17 +38,20 @@ BEGIN
                 if(jump = '1' or duck = '1') then
                     --if the jump or duck buttons are pressed it will shift the normal sequence
                     if(coinToss = '0') then
-                        --if currently the coin is 0 then we will subtract one
-                        state <= state - 1;
+                        --if currently the coin is 0 then we will set state to 0
+                        state <= '0';
                     elsif(coinToss ='1') then
-                        --if currently the coin is 1 then we will add 2
-                        state <= state + 2;
+                        --if currently the coin is 1 then we will set state to 1
+                        state <= '1';
                     end if;
 
                 else
-                    --if no inputs are pressed then we will add 1
-                    state <= state + 1;
-
+                    --if no inputs are pressed then we will toggle
+                    if (state = '1') then
+                        state <='0';
+                    else
+                        state <='1';
+                    end if;
                 end if;
             end if;
 
