@@ -12,7 +12,8 @@ ENTITY Obstacles IS
 PORT(
     clk,enable,resetn,newObstacle : IN STD_LOGIC;
     spaces : in integer range 0 to 3;
-    hex0, hex1, hex2, hex3, hex4, hex5  : out std_logic_vector (6 downto 0)
+    hex0, hex1, hex2, hex3, hex4, hex5  : out std_logic_vector (6 downto 0);
+	obstacleEnable: out std_logic
 );
 END Obstacles;
 
@@ -41,9 +42,12 @@ BEGIN
             hex4 <= "1111111";
             hex5 <= "1111111";
             count <= 0;
+            obstacleEnable <='0';
         ELSIF (clk'EVENT AND clk = '1') THEN 
+            obstacleEnable <= '0';
             if (enable = '1') then
                 if ((spaces + 3) = count) then
+                    obstacleEnable <= '1';
                     count <= 0;
                     if (newObstacle = '1') then
                         column0t <= '0';
