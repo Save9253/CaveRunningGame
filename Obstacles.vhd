@@ -12,31 +12,30 @@ ENTITY Obstacles IS
 PORT(
     clk,enable,resetn,newObstacle : IN STD_LOGIC;
     spaces : in integer range 0 to 3;
-    hex0, hex1, hex2, hex3, hex4, hex5  : out std_logic_vector (6 downto 0);
+    hex0, hex1, hex2, hex3, hex4, hex5  : out std_logic_vector (6 downto 0) := "1111111";
 	obstacleEnable: out std_logic
 );
 END Obstacles;
 
 ARCHITECTURE ObstaclesTo7Segment OF Obstacles IS
-    signal column0t,column0b : std_logic;
-    signal column1t,column1b  : std_logic;
-    signal column2t,column2b : std_logic;
-    signal column3t,column3b : std_logic;
-    signal column4t,column4b : std_logic;
-    signal column5t,column5b : std_logic;
-    signal column6t,column6b : std_logic;
-    signal column7t,column7b : std_logic;
-    signal column8t,column8b : std_logic;
-    signal column9t,column9b : std_logic;
-    signal column10t,column10b : std_logic;
-    signal column11t,column11b : std_logic;
+    signal column0t,column0b : std_logic := '1';
+    signal column1t,column1b  : std_logic := '1';
+    signal column2t,column2b : std_logic := '1';
+    signal column3t,column3b : std_logic := '1';
+    signal column4t,column4b : std_logic := '1';
+    signal column5t,column5b : std_logic := '1';
+    signal column6t,column6b : std_logic := '1';
+    signal column7t,column7b : std_logic := '1';
+    signal column8t,column8b : std_logic := '1';
+    signal column9t,column9b : std_logic := '1';
+    signal column10t,column10b : std_logic := '1';
+    signal column11t,column11b : std_logic := '1';
     signal count : integer range 0 to 6;
 BEGIN
     PROCESS (clk,resetn,enable)
     BEGIN
         If (resetn = '0') then
-            hex0 <= "1111111";
-            hex1 <= "1111111";
+            (hex0,hex1) <= "1111111";
             hex2 <= "1111111";
             hex3 <= "1111111";
             hex4 <= "1111111";
