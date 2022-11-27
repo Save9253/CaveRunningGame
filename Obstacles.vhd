@@ -18,28 +18,55 @@ PORT(
 END Obstacles;
 
 ARCHITECTURE ObstaclesTo7Segment OF Obstacles IS
-    signal column0t,column0b : std_logic := '1';
-    signal column1t,column1b  : std_logic := '1';
-    signal column2t,column2b : std_logic := '1';
-    signal column3t,column3b : std_logic := '1';
-    signal column4t,column4b : std_logic := '1';
-    signal column5t,column5b : std_logic := '1';
-    signal column6t,column6b : std_logic := '1';
-    signal column7t,column7b : std_logic := '1';
-    signal column8t,column8b : std_logic := '1';
-    signal column9t,column9b : std_logic := '1';
-    signal column10t,column10b : std_logic := '1';
-    signal column11t,column11b : std_logic := '1';
+    signal 
+        column0t,column0b,
+        column1t,column1b,
+        column2t,column2b,
+        column3t,column3b,
+        column4t,column4b,
+        column5t,column5b,
+        column6t,column6b,
+        column7t,column7b,
+        column8t,column8b,
+        column9t,column9b,
+        column10t,column10b,
+        column11t,column11b 
+        : std_logic := '1';
     signal count : integer range 0 to 6;
 BEGIN
     PROCESS (clk,resetn,enable)
     BEGIN
         If (resetn = '0') then
-            (hex0,hex1) <= "1111111";
+            hex0 <= "1111111";
+            hex1 <= "1111111";
             hex2 <= "1111111";
             hex3 <= "1111111";
             hex4 <= "1111111";
             hex5 <= "1111111";
+            column0t <='1';
+            column0b <='1';
+            column1t <='1';
+            column1b <='1';
+            column2t <='1';
+            column2b <='1';
+            column3t <='1';
+            column3b <='1';
+            column4t <='1';
+            column4b <='1';
+            column5t <='1';
+            column5b <='1';
+            column6t <='1';
+            column6b <='1';
+            column7t <='1';
+            column7b <='1';
+            column8t <='1';
+            column8b <='1';
+            column9t <='1';
+            column9b <='1';
+            column10t <='1';
+            column10b <='1';
+            column11t <='1';
+            column11b <='1';
             count <= 0;
             obstacleEnable <='0';
         ELSIF (clk'EVENT AND clk = '1') THEN 

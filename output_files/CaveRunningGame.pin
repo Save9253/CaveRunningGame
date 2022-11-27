@@ -214,9 +214,9 @@ DNU                          : AD15      :        :                   :         
 VCCPD3B4A                    : AD16      : power  :                   : 2.5V    : 3B, 4A    :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD17      :        :                   :         : 4A        :                
 VCCIO4A                      : AD18      : power  :                   : 2.5V    : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AD19      :        :                   :         : 4A        :                
-Score[9]                     : AD20      : output : 2.5 V             :         : 4A        : N              
-won                          : AD21      : output : 2.5 V             :         : 4A        : N              
+won                          : AD19      : output : 2.5 V             :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD20      :        :                   :         : 4A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD21      :        :                   :         : 4A        :                
 VCC_AUX                      : AD22      : power  :                   : 2.5V    :           :                
 GND                          : AD23      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD24      :        :                   :         : 4A        :                
@@ -340,7 +340,7 @@ GND                          : AH21      : gnd    :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH22      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH23      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH24      :        :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH25      :        :                   :         : 4A        :                
+Score[9]                     : AH25      : output : 2.5 V             :         : 4A        : N              
 VCCIO4A                      : AH26      : power  :                   : 2.5V    : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH27      :        :                   :         : 4A        :                
 Hex0[6]                      : AH28      : output : 2.5 V             :         : 5A        : Y              
@@ -372,7 +372,7 @@ VCCIO4A                      : AJ23      : power  :                   : 2.5V    
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ24      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ25      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ26      :        :                   :         : 4A        :                
-Difficulty                   : AJ27      : output : 2.5 V             :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AJ27      :        :                   :         : 4A        :                
 GND                          : AJ28      : gnd    :                   :         :           :                
 Hex1[0]                      : AJ29      : output : 2.5 V             :         : 5A        : Y              
 GND                          : AJ30      : gnd    :                   :         :           :                
@@ -400,7 +400,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AK22      :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AK23      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AK24      :        :                   :         : 4A        :                
 GND                          : AK25      : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AK26      :        :                   :         : 4A        :                
+Difficulty                   : AK26      : output : 2.5 V             :         : 4A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AK27      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AK28      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AK29      :        :                   :         : 4A        :                
