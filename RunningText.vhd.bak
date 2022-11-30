@@ -17,17 +17,17 @@ PORT(
 END RunningText;
 
 ARCHITECTURE textGenerator OF RunningText IS
-    signal count: integer range 0 to 6;
+    signal count: integer range 0 to 9;
     signal index: integer range 0 to 23;
-    signal p : std_logic_vector(6 downto 0):= "0001100";
-    signal r : std_logic_vector(6 downto 0):= "0101111";
-    signal e : std_logic_vector(6 downto 0):= "0000110";
-    signal s : std_logic_vector(6 downto 0):= "0010010";
-    signal b : std_logic_vector(6 downto 0):= "0000011";
+    signal p : std_logic_vector(6 downto 0):= "0011000";
+    signal r : std_logic_vector(6 downto 0):= "1111010";
+    signal e : std_logic_vector(6 downto 0):= "0110000";
+    signal s : std_logic_vector(6 downto 0):= "0100100";
+    signal b : std_logic_vector(6 downto 0):= "1100000";
     signal u : std_logic_vector(6 downto 0):= "1100011";
-    signal t : std_logic_vector(6 downto 0):= "0001111";
-    signal o : std_logic_vector(6 downto 0):= "0100011";
-    signal n : std_logic_vector(6 downto 0):= "0101011";
+    signal t : std_logic_vector(6 downto 0):= "1111000";
+    signal o : std_logic_vector(6 downto 0):= "1100010";
+    signal n : std_logic_vector(6 downto 0):= "1101010";
     signal a : std_logic_vector(6 downto 0):= "0001000";
     --signal y : std_logic_vector(6 downto 0):= "1000100";
     signal space : std_logic_vector(6 downto 0):= "1111111";
@@ -42,7 +42,7 @@ BEGIN
         ELSIF (clk'EVENT AND clk = '1') THEN
             hexMoveEnable <= '0';
             if (enable = '1') then
-                if(count = 6)then
+                if(count = 9)then
                     -- we are using increasing the 100ms intervals to 1 second to make the running text slow enough to read
                     count <= 0;
 
@@ -74,7 +74,7 @@ BEGIN
                     end case;
                     hexMoveEnable <= '1';
 
-                    if(index = 23)then
+                    if(index = 21)then
                         index <= 0;
                     else
                         index <= index + 1;
