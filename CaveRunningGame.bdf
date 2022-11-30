@@ -126,6 +126,40 @@ refer to the applicable agreement for further details.
 	(annotation_block (location)(rect -128 -128 -64 -104))
 )
 (pin
+	(input)
+	(rect -152 248 -136 416)
+	(text "INPUT" (rect 6 125 16 153)(font "Arial" (font_size 6))(vertical))
+	(text "enable" (rect 5 5 17 37)(font "Arial" )(vertical))
+	(pt 8 168)
+	(drawing
+		(line (pt 4 84)(pt 4 109))
+		(line (pt 12 84)(pt 12 109))
+		(line (pt 8 113)(pt 8 168))
+		(line (pt 4 84)(pt 12 84))
+		(line (pt 12 109)(pt 8 113))
+		(line (pt 4 109)(pt 8 113))
+	)
+	(rotate270)
+	(text "VCC" (rect -1 128 9 148)(font "Arial" (font_size 6))(vertical))
+)
+(pin
+	(input)
+	(rect -120 112 -104 280)
+	(text "INPUT" (rect 6 125 16 153)(font "Arial" (font_size 6))(vertical))
+	(text "crash" (rect 5 5 17 33)(font "Arial" )(vertical))
+	(pt 8 168)
+	(drawing
+		(line (pt 4 84)(pt 4 109))
+		(line (pt 12 84)(pt 12 109))
+		(line (pt 8 113)(pt 8 168))
+		(line (pt 4 84)(pt 12 84))
+		(line (pt 12 109)(pt 8 113))
+		(line (pt 4 109)(pt 8 113))
+	)
+	(rotate270)
+	(text "VCC" (rect -1 128 9 148)(font "Arial" (font_size 6))(vertical))
+)
+(pin
 	(output)
 	(rect 648 600 824 616)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
@@ -625,21 +659,6 @@ refer to the applicable agreement for further details.
 		(arc (pt 11 31)(pt 36 30)(rect 11 18 36 43))
 	)
 	(rotate270)
-)
-(symbol
-	(rect -128 384 -96 400)
-	(text "VCC" (rect 7 0 27 10)(font "Arial" (font_size 6)))
-	(text "inst7" (rect 3 5 25 22)(font "Intel Clear" )(invisible))
-	(port
-		(pt 16 16)
-		(output)
-		(text "1" (rect 19 7 24 19)(font "Courier New" (bold))(invisible))
-		(text "1" (rect 19 7 24 19)(font "Courier New" (bold))(invisible))
-		(line (pt 16 16)(pt 16 8))
-	)
-	(drawing
-		(line (pt 8 8)(pt 24 8))
-	)
 )
 (symbol
 	(rect 272 160 336 208)
@@ -1157,14 +1176,6 @@ refer to the applicable agreement for further details.
 	(pt 240 944)
 )
 (connector
-	(pt 48 432)
-	(pt -112 432)
-)
-(connector
-	(pt -112 432)
-	(pt -112 400)
-)
-(connector
 	(pt -16 208)
 	(pt -16 400)
 )
@@ -1602,6 +1613,22 @@ refer to the applicable agreement for further details.
 	(pt 920 136)
 	(pt 864 136)
 	(bus)
+)
+(connector
+	(pt 48 432)
+	(pt -144 432)
+)
+(connector
+	(pt -144 432)
+	(pt -144 416)
+)
+(connector
+	(pt 64 288)
+	(pt -112 288)
+)
+(connector
+	(pt -112 288)
+	(pt -112 280)
 )
 (junction (pt -16 208))
 (junction (pt 8 224))
