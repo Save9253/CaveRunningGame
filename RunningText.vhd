@@ -29,6 +29,7 @@ ARCHITECTURE textGenerator OF RunningText IS
     signal o : std_logic_vector(6 downto 0):= "1100010";
     signal n : std_logic_vector(6 downto 0):= "1101010";
     signal a : std_logic_vector(6 downto 0):= "0001000";
+    --signal y : std_logic_vector(6 downto 0):= "1000100";
     signal space : std_logic_vector(6 downto 0):= "1111111";
 BEGIN
     PROCESS (clk,resetn,enable)
