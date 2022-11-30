@@ -22,11 +22,11 @@ ARCHITECTURE textGenerator OF RunningText IS
     signal idleTextindex: integer range 0 to 23;
     signal wonTextIndex: integer range 0 to 8;
     signal lostTextIndex: integer range 0 to 26;
-    signal p : std_logic_vector(6 downto 0):= "0011000";
-    signal r : std_logic_vector(6 downto 0):= "1111010";
-    signal e : std_logic_vector(6 downto 0):= "0110000";
-    signal s : std_logic_vector(6 downto 0):= "0100100";
-    signal b : std_logic_vector(6 downto 0):= "1100000";
+    signal p : std_logic_vector(6 downto 0):= "0001100";
+    signal r : std_logic_vector(6 downto 0):= "0101111";
+    signal e : std_logic_vector(6 downto 0):= "0000110";
+    signal s : std_logic_vector(6 downto 0):= "0010010";
+    signal b : std_logic_vector(6 downto 0):= "0000011";
     signal u : std_logic_vector(6 downto 0):= "1100011";
     signal t : std_logic_vector(6 downto 0):= "1111000";
     signal o : std_logic_vector(6 downto 0):= "1100010";
