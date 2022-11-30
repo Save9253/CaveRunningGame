@@ -18,23 +18,23 @@ PORT(
 END RunningText;
 
 ARCHITECTURE textGenerator OF RunningText IS
-    signal count: integer range 0 to 9;
+    signal count: integer range 0 to 5;
     signal idleTextindex: integer range 0 to 23;
     signal wonTextIndex: integer range 0 to 8;
-    signal lostTextIndex: integer range 0 to 26;
+    signal lostTextIndex: integer range 0 to 27;
     signal p : std_logic_vector(6 downto 0):= "0001100";
     signal r : std_logic_vector(6 downto 0):= "0101111";
     signal e : std_logic_vector(6 downto 0):= "0000110";
     signal s : std_logic_vector(6 downto 0):= "0010010";
     signal b : std_logic_vector(6 downto 0):= "0000011";
     signal u : std_logic_vector(6 downto 0):= "1100011";
-    signal t : std_logic_vector(6 downto 0):= "1111000";
-    signal o : std_logic_vector(6 downto 0):= "1100010";
-    signal n : std_logic_vector(6 downto 0):= "1101010";
+    signal t : std_logic_vector(6 downto 0):= "0000111";
+    signal o : std_logic_vector(6 downto 0):= "0100011";
+    signal n : std_logic_vector(6 downto 0):= "0101011";
     signal a : std_logic_vector(6 downto 0):= "0001000";
     signal y : std_logic_vector(6 downto 0):= "0010001";
     signal c : std_logic_vector(6 downto 0):= "0100111";
-    signal l : std_logic_vector(6 downto 0):= "0111000";
+    signal l : std_logic_vector(6 downto 0):= "1000111";
     signal i : std_logic_vector(6 downto 0):= "1101111";
     signal d0 : std_logic_vector(6 downto 0):= "1000000";
     signal d1 : std_logic_vector(6 downto 0):= "1111001";
@@ -58,7 +58,7 @@ BEGIN
         ELSIF (clk'EVENT AND clk = '1') THEN
             hexMoveEnable <= '0';
             if (idleEnable = '1') then
-                if(count = 9)then
+                if(count = 5)then
                     -- we are using increasing the 100ms intervals to 1 second to make the running text slow enough to read
                     count <= 0;
                     case idleTextindex is
@@ -101,7 +101,7 @@ BEGIN
             end if;
 
             if (wonEnable = '1') then
-                if(count = 9)then
+                if(count = 5)then
                     -- we are using increasing the 100ms intervals to 1 second to make the running text slow enough to read
                     count <= 0;
                     case wonTextIndex is
@@ -128,7 +128,7 @@ BEGIN
 
             end if;
             if (lostEnable = '1') then
-                if(count = 9)then
+                if(count = 5)then
                     -- we are using increasing the 100ms intervals to 1 second to make the running text slow enough to read
                     count <= 0;
                     case lostTextIndex is
@@ -207,10 +207,11 @@ BEGIN
                                 when 8 => newHex <= d8;
                                 when 9 => newHex <= d9;
                             end case;
+                        when 27 => newHex <= space;
                     end case;
                     hexMoveEnable <= '1';
 
-                    if(lostTextIndex = 26)then
+                    if(lostTextIndex = 27)then
                         lostTextIndex <= 0;
                     else
                         lostTextIndex <= lostTextIndex + 1;

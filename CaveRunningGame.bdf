@@ -141,6 +141,7 @@ refer to the applicable agreement for further details.
 	)
 	(rotate270)
 	(text "VCC" (rect -1 128 9 148)(font "Arial" (font_size 6))(vertical))
+	(annotation_block (location)(rect -224 416 -152 440))
 )
 (pin
 	(input)
@@ -158,6 +159,7 @@ refer to the applicable agreement for further details.
 	)
 	(rotate270)
 	(text "VCC" (rect -1 128 9 148)(font "Arial" (font_size 6))(vertical))
+	(annotation_block (location)(rect -192 280 -120 304))
 )
 (pin
 	(output)
@@ -1085,10 +1087,6 @@ refer to the applicable agreement for further details.
 	(pt 40 272)
 )
 (connector
-	(pt 456 624)
-	(pt 440 624)
-)
-(connector
 	(pt 624 608)
 	(pt 648 608)
 	(bus)
@@ -1172,10 +1170,6 @@ refer to the applicable agreement for further details.
 	(pt 240 536)
 )
 (connector
-	(pt 240 536)
-	(pt 240 944)
-)
-(connector
 	(pt -16 208)
 	(pt -16 400)
 )
@@ -1240,18 +1234,6 @@ refer to the applicable agreement for further details.
 	(pt 624 928)
 	(pt 512 928)
 	(bus)
-)
-(connector
-	(pt 624 896)
-	(pt 528 896)
-)
-(connector
-	(pt 528 864)
-	(pt 528 896)
-)
-(connector
-	(pt 528 896)
-	(pt 528 1024)
 )
 (connector
 	(pt 528 864)
@@ -1630,6 +1612,30 @@ refer to the applicable agreement for further details.
 	(pt -112 288)
 	(pt -112 280)
 )
+(connector
+	(pt 528 864)
+	(pt 528 1024)
+)
+(connector
+	(pt 624 896)
+	(pt 240 896)
+)
+(connector
+	(pt 240 624)
+	(pt 240 896)
+)
+(connector
+	(pt 240 896)
+	(pt 240 944)
+)
+(connector
+	(pt 240 624)
+	(pt 440 624)
+)
+(connector
+	(pt 440 624)
+	(pt 456 624)
+)
 (junction (pt -16 208))
 (junction (pt 8 224))
 (junction (pt -16 400))
@@ -1637,7 +1643,6 @@ refer to the applicable agreement for further details.
 (junction (pt -16 520))
 (junction (pt 8 552))
 (junction (pt -16 608))
-(junction (pt 240 536))
 (junction (pt 8 640))
 (junction (pt -80 240))
 (junction (pt -56 256))
@@ -1646,7 +1651,6 @@ refer to the applicable agreement for further details.
 (junction (pt -16 136))
 (junction (pt 8 152))
 (junction (pt 232 400))
-(junction (pt 528 896))
 (junction (pt 432 640))
 (junction (pt 448 608))
 (junction (pt 264 224))
@@ -1655,3 +1659,5 @@ refer to the applicable agreement for further details.
 (junction (pt 400 152))
 (junction (pt 352 280))
 (junction (pt 648 608))
+(junction (pt 240 896))
+(junction (pt 440 624))
