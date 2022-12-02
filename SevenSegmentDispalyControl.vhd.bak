@@ -12,7 +12,7 @@ ENTITY SevenSegmentDisplayControl IS
 PORT(
     clk,resetn,runninTextEnable,gameEnable : IN STD_LOGIC;
     newRunninTextHex, manHex,newObstacleHex0,newObstacleHex1,newObstacleHex2,newObstacleHex3,newObstacleHex4,newObstacleHex5 : in std_logic_vector(6 downto 0);
-	hex0,hex1,hex2,hex3,hex4,hex5 : buffer std_logic_vector(6 downto 0):="1111111"
+    hex0,hex1,hex2,hex3,hex4,hex5 : buffer std_logic_vector(6 downto 0):="1111111"
 );
 END SevenSegmentDisplayControl;
 
