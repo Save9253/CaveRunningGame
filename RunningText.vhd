@@ -35,7 +35,7 @@ ARCHITECTURE textGenerator OF RunningText IS
     signal y : std_logic_vector(6 downto 0):= "0010001";
     signal c : std_logic_vector(6 downto 0):= "0100111";
     signal l : std_logic_vector(6 downto 0):= "1000111";
-    signal i : std_logic_vector(6 downto 0):= "1101111";
+    signal i : std_logic_vector(6 downto 0):= "1001111";
     signal d0 : std_logic_vector(6 downto 0):= "1000000";
     signal d1 : std_logic_vector(6 downto 0):= "1111001";
     signal d2 : std_logic_vector(6 downto 0):= "0100100";

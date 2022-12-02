@@ -11,7 +11,8 @@ ENTITY GameStateControl IS
 
 PORT(
     clk,resetn,jump,duck,won,crash : IN STD_LOGIC;
-    idleEnable,runEnable,wonEnable,lostEnable : out std_logic
+    idleEnable,runEnable,wonEnable,lostEnable : out std_logic;
+    resetScoren: out std_logic := '1'
 );
 END GameStateControl;
 
@@ -28,6 +29,7 @@ BEGIN
             wonEnable <= '0';
             lostEnable <= '0';
         ELSIF (clk'EVENT AND clk = '1') THEN
+            resetScoren <= '1';
 			case gameState is
                 when idleS =>
                     if (jump = '0' or duck = '0') then
@@ -40,10 +42,12 @@ BEGIN
                         gameState <= lostS;
                         runEnable <= '0';
                         lostEnable <= '1';
+                        resetScoren <= '0';
                     elsif (won = '1') then
                         gameState <= wonS;
                         runEnable <= '0';
                         wonEnable <= '1';
+                        resetScoren <= '0';
                     end if;
                 when wonS =>
                     if (jump = '0' or duck = '0') then
