@@ -17,7 +17,6 @@ PORT(
 END Integer2digits;
 
 ARCHITECTURE Converter OF Integer2digits IS
-    signal temp: integer range 0 to 1023;
 BEGIN
     PROCESS (clk,resetn,enable)
     BEGIN
@@ -26,27 +25,23 @@ BEGIN
             dig1 <= 0;
             dig2 <= 0;
             dig3 <= 0;
-            temp <= 0;
         ELSIF (clk'EVENT AND clk = '1') THEN
             if (enable = '1') then
                 if(integerIn > 999) then
-                    dig3 <= integerIn mod 10; -- get remainder when devided by 10
-                    temp <= integerIn/10; -- devide by 10
-                    dig2 <= temp mod 10;
-                    temp <= temp/10;
-                    dig1 <= temp mod 10;
-                    dig0 <= temp/10;
+                    dig3 <= 1;
+                    dig2 <= 0;
+                    dig1 <= (integerIn/10) mod 10;
+                    dig0 <= integerIn mod 10;
                 elsif (integerIn > 99) then
                     dig3 <= 0;
-                    dig2 <= integerIn mod 10;
-                    temp <= temp/10;
-                    dig1 <= temp mod 10;
-                    dig0 <= temp/10;
+                    dig2 <= integerIn/100;
+                    dig1 <= (integerIn/10) mod 10;
+                    dig0 <= integerIn mod 10;
                 elsif (integerIn > 9) then
                     dig3 <= 0;
                     dig2 <= 0;
-                    dig1 <= integerIn mod 10;
-                    dig0 <= integerIn/10;
+                    dig1 <= integerIn/10;
+                    dig0 <= integerIn mod 10;
                 else
                     dig3 <= 0;
                     dig2 <= 0;

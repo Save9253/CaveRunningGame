@@ -311,7 +311,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AG22      :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG23      :        :                   :         : 4A        :                
 GND                          : AG24      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG25      :        :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AG26      :        :                   :         : 4A        :                
+Score[9]                     : AG26      : output : 2.5 V             :         : 4A        : N              
 Hex0[3]                      : AG27      : output : 2.5 V             :         : 5A        : Y              
 Hex0[5]                      : AG28      : output : 2.5 V             :         : 5A        : Y              
 VCCIO5A                      : AG29      : power  :                   : 2.5V    : 5A        :                
@@ -371,7 +371,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AJ22      :        :                   :      
 VCCIO4A                      : AJ23      : power  :                   : 2.5V    : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ24      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ25      :        :                   :         : 4A        :                
-Score[9]                     : AJ26      : output : 2.5 V             :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AJ26      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ27      :        :                   :         : 4A        :                
 GND                          : AJ28      : gnd    :                   :         :           :                
 Hex1[0]                      : AJ29      : output : 2.5 V             :         : 5A        : Y              
@@ -400,7 +400,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AK22      :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AK23      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AK24      :        :                   :         : 4A        :                
 GND                          : AK25      : gnd    :                   :         :           :                
-Score[8]                     : AK26      : output : 2.5 V             :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AK26      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AK27      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AK28      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AK29      :        :                   :         : 4A        :                
@@ -934,7 +934,7 @@ Score[4]                     : W17       : output : 2.5 V             :         
 GND                          : W18       : gnd    :                   :         :           :                
 Score[5]                     : W19       : output : 2.5 V             :         : 4A        : Y              
 Score[7]                     : W20       : output : 2.5 V             :         : 5A        : Y              
-testObstacle                 : W21       : output : 2.5 V             :         : 5A        : Y              
+Score[8]                     : W21       : output : 2.5 V             :         : 5A        : Y              
 Hex4[3]                      : W22       : output : 2.5 V             :         : 5A        : Y              
 VCCIO5A                      : W23       : power  :                   : 2.5V    : 5A        :                
 Hex4[4]                      : W24       : output : 2.5 V             :         : 5A        : Y              
@@ -964,7 +964,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : Y17       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y18       :        :                   :         : 4A        :                
 Score[6]                     : Y19       : output : 2.5 V             :         : 4A        : Y              
 GND                          : Y20       : gnd    :                   :         :           :                
-testMan                      : Y21       : output : 2.5 V             :         : 5A        : Y              
+JumpTest                     : Y21       : output : 2.5 V             :         : 5A        : Y              
 VCCA_FPLL                    : Y22       : power  :                   : 2.5V    :           :                
 Hex4[1]                      : Y23       : output : 2.5 V             :         : 5A        : Y              
 Hex4[2]                      : Y24       : output : 2.5 V             :         : 5A        : Y              
