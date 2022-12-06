@@ -42,24 +42,24 @@ BEGIN
                         gameState <= lostS;
                         runEnable <= '0';
                         lostEnable <= '1';
-                        resetScoren <= '0';
                     elsif (won = '1') then
                         gameState <= wonS;
                         runEnable <= '0';
                         wonEnable <= '1';
-                        resetScoren <= '0';
                     end if;
                 when wonS =>
                     if (jump = '0' or duck = '0') then
                         gameState <= runS;
                         wonEnable <= '0';
                         runEnable <= '1';
+                        resetScoren <= '0';
                     end if;
                 when lostS =>
                     if (jump = '0' or duck = '0') then
                         gameState <= runS;
                         lostEnable <= '0';
                         runEnable <= '1';
+                        resetScoren <= '0';
                     end if;
             end case;
         END IF;
