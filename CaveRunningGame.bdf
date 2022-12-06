@@ -55,7 +55,7 @@ refer to the applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect -24 -64 -8 104)
+	(rect -24 -320 -8 -152)
 	(text "INPUT" (rect 6 125 16 153)(font "Arial" (font_size 6))(vertical))
 	(text "clk" (rect 4 5 16 19)(font "Arial" )(vertical))
 	(pt 8 168)
@@ -69,11 +69,11 @@ refer to the applicable agreement for further details.
 	)
 	(rotate270)
 	(text "VCC" (rect -1 128 9 148)(font "Arial" (font_size 6))(vertical))
-	(annotation_block (location)(rect -24 -128 40 -104))
+	(annotation_block (location)(rect -24 -384 40 -360))
 )
 (pin
 	(input)
-	(rect 0 -64 16 104)
+	(rect 0 -320 16 -152)
 	(text "INPUT" (rect 6 125 16 153)(font "Arial" (font_size 6))(vertical))
 	(text "resetn" (rect -1 5 16 34)(font "Intel Clear" )(vertical))
 	(pt 8 168)
@@ -87,11 +87,11 @@ refer to the applicable agreement for further details.
 	)
 	(rotate270)
 	(text "VCC" (rect -1 128 9 148)(font "Arial" (font_size 6))(vertical))
-	(annotation_block (location)(rect 16 -96 88 -72))
+	(annotation_block (location)(rect 16 -352 88 -328))
 )
 (pin
 	(input)
-	(rect -88 -64 -72 104)
+	(rect -88 -320 -72 -152)
 	(text "INPUT" (rect 6 125 16 153)(font "Arial" (font_size 6))(vertical))
 	(text "jump" (rect -1 5 16 28)(font "Intel Clear" )(vertical))
 	(pt 8 168)
@@ -105,11 +105,11 @@ refer to the applicable agreement for further details.
 	)
 	(rotate270)
 	(text "VCC" (rect -1 128 9 148)(font "Arial" (font_size 6))(vertical))
-	(annotation_block (location)(rect -152 -96 -88 -72))
+	(annotation_block (location)(rect -152 -352 -88 -328))
 )
 (pin
 	(input)
-	(rect -64 -64 -48 104)
+	(rect -64 -320 -48 -152)
 	(text "INPUT" (rect 6 125 16 153)(font "Arial" (font_size 6))(vertical))
 	(text "duck" (rect -1 5 16 27)(font "Intel Clear" )(vertical))
 	(pt 8 168)
@@ -123,7 +123,7 @@ refer to the applicable agreement for further details.
 	)
 	(rotate270)
 	(text "VCC" (rect -1 128 9 148)(font "Arial" (font_size 6))(vertical))
-	(annotation_block (location)(rect -128 -128 -64 -104))
+	(annotation_block (location)(rect -128 -384 -64 -360))
 )
 (pin
 	(input)
@@ -1212,6 +1212,80 @@ refer to the applicable agreement for further details.
 		(rectangle (rect 16 16 232 224))
 	)
 )
+(symbol
+	(rect -216 -112 -120 56)
+	(text "edge_detect" (rect 77 5 96 79)(font "Intel Clear" (font_size 8))(vertical))
+	(text "inst8" (rect 4 8 21 30)(font "Intel Clear" )(vertical))
+	(port
+		(pt 64 0)
+		(input)
+		(text "enable" (rect 0 0 40 19)(font "Intel Clear" (font_size 8)))
+		(text "enable" (rect 50 21 69 61)(font "Intel Clear" (font_size 8))(vertical))
+		(line (pt 64 0)(pt 64 16))
+	)
+	(port
+		(pt 48 0)
+		(input)
+		(text "clk" (rect 0 0 16 19)(font "Intel Clear" (font_size 8)))
+		(text "clk" (rect 34 21 53 37)(font "Intel Clear" (font_size 8))(vertical))
+		(line (pt 48 0)(pt 48 16))
+	)
+	(port
+		(pt 32 0)
+		(input)
+		(text "resetn" (rect 0 0 36 19)(font "Intel Clear" (font_size 8)))
+		(text "resetn" (rect 18 21 37 57)(font "Intel Clear" (font_size 8))(vertical))
+		(line (pt 32 0)(pt 32 16))
+	)
+	(port
+		(pt 64 168)
+		(output)
+		(text "edge_detect" (rect 0 0 74 19)(font "Intel Clear" (font_size 8)))
+		(text "edge_detect" (rect 50 73 69 147)(font "Intel Clear" (font_size 8))(vertical))
+		(line (pt 64 168)(pt 64 152))
+	)
+	(drawing
+		(rectangle (rect 16 16 80 152))
+	)
+	(rotate270)
+)
+(symbol
+	(rect 48 -104 144 64)
+	(text "edge_detect" (rect 77 5 96 79)(font "Intel Clear" (font_size 8))(vertical))
+	(text "inst10" (rect 4 8 21 36)(font "Intel Clear" )(vertical))
+	(port
+		(pt 64 0)
+		(input)
+		(text "enable" (rect 0 0 40 19)(font "Intel Clear" (font_size 8)))
+		(text "enable" (rect 50 21 69 61)(font "Intel Clear" (font_size 8))(vertical))
+		(line (pt 64 0)(pt 64 16))
+	)
+	(port
+		(pt 48 0)
+		(input)
+		(text "clk" (rect 0 0 16 19)(font "Intel Clear" (font_size 8)))
+		(text "clk" (rect 34 21 53 37)(font "Intel Clear" (font_size 8))(vertical))
+		(line (pt 48 0)(pt 48 16))
+	)
+	(port
+		(pt 32 0)
+		(input)
+		(text "resetn" (rect 0 0 36 19)(font "Intel Clear" (font_size 8)))
+		(text "resetn" (rect 18 21 37 57)(font "Intel Clear" (font_size 8))(vertical))
+		(line (pt 32 0)(pt 32 16))
+	)
+	(port
+		(pt 64 168)
+		(output)
+		(text "edge_detect" (rect 0 0 74 19)(font "Intel Clear" (font_size 8)))
+		(text "edge_detect" (rect 50 73 69 147)(font "Intel Clear" (font_size 8))(vertical))
+		(line (pt 64 168)(pt 64 152))
+	)
+	(drawing
+		(rectangle (rect 16 16 80 152))
+	)
+	(rotate270)
+)
 (connector
 	(pt 304 976)
 	(pt 288 976)
@@ -1321,14 +1395,6 @@ refer to the applicable agreement for further details.
 (connector
 	(pt 352 280)
 	(pt 352 184)
-)
-(connector
-	(pt -16 104)
-	(pt -16 136)
-)
-(connector
-	(pt 8 104)
-	(pt 8 152)
 )
 (connector
 	(pt 344 168)
@@ -1703,32 +1769,16 @@ refer to the applicable agreement for further details.
 	(pt 40 256)
 )
 (connector
-	(pt -56 104)
-	(pt -56 256)
-)
-(connector
 	(pt -80 240)
 	(pt 40 240)
-)
-(connector
-	(pt -80 104)
-	(pt -80 240)
 )
 (connector
 	(pt 8 224)
 	(pt 40 224)
 )
 (connector
-	(pt 8 152)
-	(pt 8 224)
-)
-(connector
 	(pt -16 208)
 	(pt 40 208)
-)
-(connector
-	(pt -16 136)
-	(pt -16 208)
 )
 (connector
 	(pt -16 208)
@@ -1847,10 +1897,6 @@ refer to the applicable agreement for further details.
 	(pt 360 360)
 )
 (connector
-	(pt -56 256)
-	(pt -56 360)
-)
-(connector
 	(pt -56 360)
 	(pt -56 808)
 )
@@ -1861,10 +1907,6 @@ refer to the applicable agreement for further details.
 (connector
 	(pt -80 352)
 	(pt 376 352)
-)
-(connector
-	(pt -80 240)
-	(pt -80 352)
 )
 (connector
 	(pt -80 352)
@@ -1956,6 +1998,110 @@ refer to the applicable agreement for further details.
 	(pt 904 832)
 	(pt 928 832)
 )
+(connector
+	(pt -56 256)
+	(pt -56 360)
+)
+(connector
+	(pt -80 240)
+	(pt -80 352)
+)
+(connector
+	(pt -16 136)
+	(pt -16 208)
+)
+(connector
+	(pt 8 152)
+	(pt 8 224)
+)
+(connector
+	(pt -16 -152)
+	(pt -16 -136)
+)
+(connector
+	(pt -16 -136)
+	(pt -16 136)
+)
+(connector
+	(pt -168 -136)
+	(pt -16 -136)
+)
+(connector
+	(pt -16 -136)
+	(pt 96 -136)
+)
+(connector
+	(pt -168 -136)
+	(pt -168 -112)
+)
+(connector
+	(pt 8 -152)
+	(pt 8 -120)
+)
+(connector
+	(pt -184 -120)
+	(pt -184 -112)
+)
+(connector
+	(pt -184 -120)
+	(pt 8 -120)
+)
+(connector
+	(pt 8 -120)
+	(pt 80 -120)
+)
+(connector
+	(pt -152 -112)
+	(pt -80 -112)
+)
+(connector
+	(pt -80 -152)
+	(pt -80 -112)
+)
+(connector
+	(pt 112 64)
+	(pt -56 64)
+)
+(connector
+	(pt -56 64)
+	(pt -56 256)
+)
+(connector
+	(pt 8 -120)
+	(pt 8 152)
+)
+(connector
+	(pt 112 -104)
+	(pt 112 -112)
+)
+(connector
+	(pt 80 -120)
+	(pt 80 -104)
+)
+(connector
+	(pt 96 -136)
+	(pt 96 -104)
+)
+(connector
+	(pt 112 -112)
+	(pt -56 -112)
+)
+(connector
+	(pt -56 -152)
+	(pt -56 -112)
+)
+(connector
+	(pt -152 56)
+	(pt -152 64)
+)
+(connector
+	(pt -152 64)
+	(pt -80 64)
+)
+(connector
+	(pt -80 64)
+	(pt -80 240)
+)
 (junction (pt -16 208))
 (junction (pt 8 224))
 (junction (pt -16 520))
@@ -1986,3 +2132,5 @@ refer to the applicable agreement for further details.
 (junction (pt 496 640))
 (junction (pt 8 632))
 (junction (pt 144 640))
+(junction (pt -16 -136))
+(junction (pt 8 -120))

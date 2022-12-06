@@ -32,7 +32,7 @@ BEGIN
             resetScoren <= '1';
 			case gameState is
                 when idleS =>
-                    if (jump = '0' or duck = '0') then
+                    if (jump = '1' or duck = '1') then
                         gameState <= runS;
                         runEnable <= '1';
                         idleEnable <= '0';
@@ -48,14 +48,14 @@ BEGIN
                         wonEnable <= '1';
                     end if;
                 when wonS =>
-                    if (jump = '0' or duck = '0') then
+                    if (jump = '1' or duck = '1') then
                         gameState <= runS;
                         wonEnable <= '0';
                         runEnable <= '1';
                         resetScoren <= '0';
                     end if;
                 when lostS =>
-                    if (jump = '0' or duck = '0') then
+                    if (jump = '1' or duck = '1') then
                         gameState <= runS;
                         lostEnable <= '0';
                         runEnable <= '1';

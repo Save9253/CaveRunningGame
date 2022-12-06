@@ -35,7 +35,7 @@ BEGIN
 
             if (enable = '1') then
                 --when enabled the a new obsticle is generated
-                if(jump = '0' or duck = '0') then
+                if(jump = '1' or duck = '1') then
                     --if the jump or duck buttons are pressed it will shift the normal sequence
                     if(coinToss = '0') then
                         --if currently the coin is 0 then we will set state to 0

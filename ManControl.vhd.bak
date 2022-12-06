@@ -36,11 +36,11 @@ BEGIN
             if (enable = '1') then
                 case manState is
                     when runS =>
-                        if (jump = '1') then
+                        if (jump = '0') then
                             manState <= jumpS;
                             manPositionT <= '0';
                             manPositionB <= '1';
-                        elsif (duck = '1') then
+                        elsif (duck = '0') then
                             manState <= duckS;
                             manPositionT <= '1';
                             manPositionB <= '0';
