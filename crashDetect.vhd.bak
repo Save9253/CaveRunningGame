@@ -1,0 +1,36 @@
+-- Western Carolina University
+-- EE221 - Logic Systems Design I
+-- Saveliy Saunin & Charles Maddrey
+-- Cave Runner Game
+-- Running Text
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY SevenSegmentDisplayControl IS
+
+PORT(
+    clk,resetn,enable : IN STD_LOGIC;
+	 obstaclePossitionT, obstaclePossitionB, manPositionT, manPositionB: in STD_LOGIC;
+	 crashDetect : out std_logic
+);
+END SevenSegmentDisplayControl;
+
+ARCHITECTURE Multiplex OF SevenSegmentDisplayControl IS
+
+BEGIN
+    PROCESS (clk,resetn,runninTextEnable,gameEnable)
+    BEGIN
+        If (resetn = '0') then
+				crashDetect <= '0';
+        ELSIF (clk'EVENT AND clk = '1') THEN
+				if(enable <= '1') then
+				    IF((newObstacleHex4(5) = '0') AND (manHex(5) = '0')) OR
+					 ((newObstacleHex4(5) = '0') AND (manHex(4) = '0')) THEN
+					   crash_detect <= '1';
+					 END IF;
+				end if;
+        END IF;
+    END PROCESS;
+
+END Multiplex;

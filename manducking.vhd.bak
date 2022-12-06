@@ -35,7 +35,7 @@ BEGIN
         IF (resetn = '0') THEN
 		  manHEX <= run_step1;
 		ELSIF (clk'EVENT AND clk = '1') THEN
-         IF (manPositionT = '0' AND manPositionB = '1') THEN
+            IF (manPositionT = '0' AND manPositionB = '1') THEN
 			  manHEX <= jump;
 			
 			IF (manPositionB = '0' AND manPositionT = '1' ) THEN
