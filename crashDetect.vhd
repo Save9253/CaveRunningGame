@@ -7,16 +7,16 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 
-ENTITY crashDetect IS
+ENTITY crashDetecter IS
 
 PORT(
     clk,resetn,enable : IN STD_LOGIC;
 	 obstaclePossitionT, obstaclePossitionB, manPositionT, manPositionB: in STD_LOGIC;
 	 crashDetect : out std_logic
 );
-END crashDetect;
+END crashDetecter;
 
-ARCHITECTURE detect OF crashDetect IS
+ARCHITECTURE detect OF crashDetecter IS
 
 BEGIN
     PROCESS (clk,resetn)
@@ -26,8 +26,8 @@ BEGIN
         ELSIF (clk'EVENT AND clk = '1') THEN
 				if(enable <= '1') then
 					crashDetect <= '0';
-				    IF((obstaclePossitionT = '0') AND (manPositionT = '0')) OR
-					 ((obstaclePossitionB = '0') AND (manPositionB = '0')) THEN
+				    IF (((obstaclePossitionT = '0') AND (manPositionT = '0')) OR
+					 ((obstaclePossitionB = '0') AND (manPositionB = '0'))) THEN
 					   crashDetect <= '1';
 					 END IF;
 				end if;
