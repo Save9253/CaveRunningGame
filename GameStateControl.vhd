@@ -19,7 +19,7 @@ ARCHITECTURE StateControl OF GameStateControl IS
 	type state_type is (idleS,runS,wonS,lostS);
     signal gameState: state_type;
 BEGIN
-    PROCESS (clk,resetn)
+    PROCESS (clk,resetn, crash)
     BEGIN
         If (resetn = '0') then
             idleEnable <= '1';
@@ -28,36 +28,21 @@ BEGIN
             lostEnable <= '0';
 				gameState <= idleS;
         ELSIF (clk'EVENT AND clk = '1') THEN
-            case gameState is
-                when idleS =>
+                if (gameState = idleS) then
                     if (jump = '1' or duck = '1') then
                         gameState <= runS;
                         runEnable <= '1';
                         idleEnable <= '0';
                     end if;
-                when runS =>
+                elsif (gameState = runS) then
                     if (crash = '1') then
-                        gameState <= lostS;
                         runEnable <= '0';
                         lostEnable <= '1';
                     elsif (won = '1') then
-                        gameState <= wonS;
                         runEnable <= '0';
                         wonEnable <= '1';
                     end if;
-                when wonS =>
-                    if (jump = '1' or duck = '1') then
-                        gameState <= runS;
-                        wonEnable <= '0';
-                        runEnable <= '1';
-                    end if;
-                when lostS =>
-                    if (jump = '1' or duck = '1') then
-                        gameState <= runS;
-                        lostEnable <= '0';
-                        runEnable <= '1';
-                    end if;
-            end case;
+                end if;
         END IF;
     END PROCESS;
 
