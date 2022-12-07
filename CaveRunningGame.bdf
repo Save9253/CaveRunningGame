@@ -144,24 +144,6 @@ refer to the applicable agreement for further details.
 	(annotation_block (location)(rect -224 416 -152 440))
 )
 (pin
-	(input)
-	(rect -120 112 -104 280)
-	(text "INPUT" (rect 6 125 16 153)(font "Arial" (font_size 6))(vertical))
-	(text "crash" (rect 5 5 17 32)(font "Arial" )(vertical))
-	(pt 8 168)
-	(drawing
-		(line (pt 4 84)(pt 4 109))
-		(line (pt 12 84)(pt 12 109))
-		(line (pt 8 113)(pt 8 168))
-		(line (pt 4 84)(pt 12 84))
-		(line (pt 12 109)(pt 8 113))
-		(line (pt 4 109)(pt 8 113))
-	)
-	(rotate270)
-	(text "VCC" (rect -1 128 9 148)(font "Arial" (font_size 6))(vertical))
-	(annotation_block (location)(rect -192 280 -120 304))
-)
-(pin
 	(output)
 	(rect 704 600 880 616)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
@@ -279,23 +261,6 @@ refer to the applicable agreement for further details.
 		(line (pt 78 12)(pt 82 8))
 	)
 	(annotation_block (location)(rect 1104 936 1176 960))
-)
-(pin
-	(output)
-	(rect 256 40 432 56)
-	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "crash2" (rect 90 0 123 12)(font "Arial" ))
-	(pt 0 8)
-	(drawing
-		(line (pt 0 8)(pt 52 8))
-		(line (pt 52 4)(pt 78 4))
-		(line (pt 52 12)(pt 78 12))
-		(line (pt 52 12)(pt 52 4))
-		(line (pt 78 4)(pt 82 8))
-		(line (pt 82 8)(pt 78 12))
-		(line (pt 78 12)(pt 82 8))
-	)
-	(annotation_block (location)(rect 432 56 496 80))
 )
 (symbol
 	(rect 48 400 208 512)
@@ -1636,10 +1601,6 @@ refer to the applicable agreement for further details.
 	(pt 40 288)
 )
 (connector
-	(pt -112 280)
-	(pt -112 288)
-)
-(connector
 	(pt 24 272)
 	(pt 40 272)
 )
@@ -1992,19 +1953,19 @@ refer to the applicable agreement for further details.
 	(pt 912 832)
 )
 (connector
-	(pt 224 48)
-	(pt 256 48)
+	(pt -112 1080)
+	(pt -112 288)
 )
 (connector
-	(pt 224 256)
-	(pt 224 48)
+	(pt 912 1080)
+	(pt -112 1080)
+)
+(connector
+	(pt 912 1080)
+	(pt 912 832)
 )
 (connector
 	(pt 208 256)
-	(pt 224 256)
-)
-(connector
-	(pt 224 256)
 	(pt 256 256)
 )
 (junction (pt -16 208))
@@ -2039,4 +2000,3 @@ refer to the applicable agreement for further details.
 (junction (pt 8 -120))
 (junction (pt 440 520))
 (junction (pt 8 640))
-(junction (pt 224 256))
