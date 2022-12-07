@@ -12,7 +12,7 @@ ENTITY SevenSegmentDisplayControl IS
 PORT(
     clk,resetn,runninTextEnable,gameEnable : IN STD_LOGIC;
     newRunninTextHex, manHex,newObstacleHex0,newObstacleHex1,newObstacleHex2,newObstacleHex3,newObstacleHex4,newObstacleHex5 : in std_logic_vector(6 downto 0);
-	 obstaclePossitionT, obstaclePossitionB                           : OUT STD_LOGIC:='1';
+	 crashDetect : out std_logic;
 	hex0,hex1,hex2,hex3,hex4,hex5 : buffer std_logic_vector(6 downto 0):="1111111"
 );
 END SevenSegmentDisplayControl;
@@ -29,8 +29,7 @@ BEGIN
             hex3 <= "1111111";
             hex4 <= "1111111";
             hex5 <= "1111111";
-				obstaclePossitionT <= '0';
-				obstaclePossitionB <= '0';
+				crashDetect <= '0';
         ELSIF (clk'EVENT AND clk = '1') THEN
             if (runninTextEnable = '1') then
                 hex0 <= newRunninTextHex;
@@ -40,6 +39,7 @@ BEGIN
                 hex4 <= hex3;
                 hex5 <= hex4;
             elsif (gameEnable = '1') then
+					crashDetect <= '0';
                 hex0 <= newObstacleHex0;
                 hex1 <= newObstacleHex1;
                 hex2 <= newObstacleHex2;
@@ -52,8 +52,10 @@ BEGIN
                     (newObstacleHex4(2) and manHex(2)) &
                     (newObstacleHex4(1) and manHex(1)) &
                     (newObstacleHex4(0) and manHex(0));
-						obstaclePossitionT <= newObstacleHex4(5);
-						obstaclePossitionT <= newObstacleHex4(4);
+					IF (((newObstacleHex4(5) = '0') AND (manHex(5) = '0')) OR
+					 ((newObstacleHex4(4) = '0') AND (manHex(4) = '0'))) THEN
+					   crashDetect <= '1';
+					 END IF;
                 hex5 <= newObstacleHex5;
             end if;
 				
