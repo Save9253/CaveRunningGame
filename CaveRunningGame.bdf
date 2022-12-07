@@ -282,7 +282,7 @@ refer to the applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 936 816 1112 832)
+	(rect 256 40 432 56)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "crash2" (rect 90 0 123 12)(font "Arial" ))
 	(pt 0 8)
@@ -295,7 +295,7 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 1112 832 1176 856))
+	(annotation_block (location)(rect 432 56 496 80))
 )
 (symbol
 	(rect 48 400 208 512)
@@ -1938,10 +1938,6 @@ refer to the applicable agreement for further details.
 	(pt 272 240)
 )
 (connector
-	(pt 208 256)
-	(pt 256 256)
-)
-(connector
 	(pt 440 520)
 	(pt 440 624)
 )
@@ -1992,16 +1988,24 @@ refer to the applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 912 832)
-	(pt 912 824)
-)
-(connector
 	(pt 904 832)
 	(pt 912 832)
 )
 (connector
-	(pt 912 824)
-	(pt 936 824)
+	(pt 224 48)
+	(pt 256 48)
+)
+(connector
+	(pt 224 256)
+	(pt 224 48)
+)
+(connector
+	(pt 208 256)
+	(pt 224 256)
+)
+(connector
+	(pt 224 256)
+	(pt 256 256)
 )
 (junction (pt -16 208))
 (junction (pt 8 224))
@@ -2035,3 +2039,4 @@ refer to the applicable agreement for further details.
 (junction (pt 8 -120))
 (junction (pt 440 520))
 (junction (pt 8 640))
+(junction (pt 224 256))
