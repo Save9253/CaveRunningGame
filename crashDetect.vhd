@@ -25,6 +25,7 @@ BEGIN
 				crashDetect <= '0';
         ELSIF (clk'EVENT AND clk = '1') THEN
 				if(enable <= '1') then
+					crashDetect <= '0';
 				    IF((obstaclePossitionT = '0') AND (manPositionT = '0')) OR
 					 ((obstaclePossitionB = '0') AND (manPositionB = '0')) THEN
 					   crashDetect <= '1';

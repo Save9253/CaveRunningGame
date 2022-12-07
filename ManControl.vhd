@@ -19,9 +19,9 @@ END ManControl;
 
 ARCHITECTURE StateControl OF ManControl IS
 	SIGNAL run_step1 : std_logic_vector(6 downto 0):= "1001111";
-   SIGNAL run_step2 : std_logic_vector(6 downto 0):= "0011111";
-   SIGNAL jumpHex      : std_logic_vector(6 downto 0):= "1011110";
-   SIGNAL duckHex    : std_logic_vector(6 downto 0):= "0101111";
+    SIGNAL run_step2 : std_logic_vector(6 downto 0):= "0011111";
+    SIGNAL jumpHex      : std_logic_vector(6 downto 0):= "1011110";
+    SIGNAL duckHex    : std_logic_vector(6 downto 0):= "0101111";
 	signal hold : std_logic;
 	signal updownleg: std_logic;
 BEGIN
@@ -43,7 +43,7 @@ BEGIN
                 manPositionB <= '0';
 					 manHEX <= duckHEx;
             end if;
-				
+
             if (enable = '1') then
                 manPositionB <= '0';
                 manPositionT <= '0';
@@ -51,13 +51,13 @@ BEGIN
 						if (updownleg = '1') then
 							manHEX <= run_step1;
 							updownleg <= '0';
-						else 
+						else
 							manHEX <= run_step2;
 							updownleg <= '1';
 						end if;
-						
+
 					end if;
-					
+
 				END IF;
 			END IF;
     END PROCESS;

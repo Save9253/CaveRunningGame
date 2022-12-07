@@ -11,57 +11,34 @@ ENTITY GameStateControl IS
 
 PORT(
     clk,resetn,jump,duck,won,crash : IN STD_LOGIC;
-    idleEnable,runEnable,wonEnable,lostEnable : out std_logic;
-    resetScoren: out std_logic := '1'
+    idleEnable,runEnable,wonEnable,lostEnable : buffer std_logic
 );
 END GameStateControl;
 
 ARCHITECTURE StateControl OF GameStateControl IS
-    type state_type is (idleS,runS,wonS,lostS);
-    signal gameState: state_type;
 BEGIN
     PROCESS (clk,resetn)
     BEGIN
         If (resetn = '0') then
-            gameState <= idleS;
             idleEnable <= '1';
             runEnable <= '0';
             wonEnable <= '0';
             lostEnable <= '0';
         ELSIF (clk'EVENT AND clk = '1') THEN
-            resetScoren <= '1';
-			case gameState is
-                when idleS =>
-                    if (jump = '1' or duck = '1') then
-                        gameState <= runS;
-                        runEnable <= '1';
-                        idleEnable <= '0';
-                    end if;
-                when runS =>
-                    if (crash = '1') then
-                        gameState <= lostS;
-                        runEnable <= '0';
-                        lostEnable <= '1';
-                    elsif (won = '1') then
-                        gameState <= wonS;
-                        runEnable <= '0';
-                        wonEnable <= '1';
-                    end if;
-                when wonS =>
-                    if (jump = '1' or duck = '1') then
-                        gameState <= runS;
-                        wonEnable <= '0';
-                        runEnable <= '1';
-                        resetScoren <= '0';
-                    end if;
-                when lostS =>
-                    if (jump = '1' or duck = '1') then
-                        gameState <= runS;
-                        lostEnable <= '0';
-                        runEnable <= '1';
-                        resetScoren <= '0';
-                    end if;
-            end case;
+            if(idleEnable <= '1') then
+                if (jump = '1' or duck = '1') then
+                    runEnable <= '1';
+                    idleEnable <= '0';
+                end if;
+            elsif(runEnable <= '1') then
+                if (crash = '1') then
+                    runEnable <= '0';
+                    lostEnable <= '1';
+                elsif (won = '1') then
+                    runEnable <= '0';
+                    wonEnable <= '1';
+                end if;
+            end if;
         END IF;
     END PROCESS;
 
