@@ -20,7 +20,7 @@ refer to the applicable agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 184 128)
+	(rect 16 16 208 128)
 	(text "Score" (rect 5 0 28 12)(font "Arial" ))
 	(text "inst" (rect 8 96 20 108)(font "Arial" ))
 	(port
@@ -45,27 +45,34 @@ refer to the applicable agreement for further details.
 		(line (pt 0 64)(pt 16 64)(line_width 1))
 	)
 	(port
-		(pt 168 32)
+		(pt 192 32)
 		(output)
 		(text "score[9..0]" (rect 0 0 42 12)(font "Arial" ))
-		(text "score[9..0]" (rect 105 27 147 39)(font "Arial" ))
-		(line (pt 168 32)(pt 152 32)(line_width 3))
+		(text "score[9..0]" (rect 129 27 171 39)(font "Arial" ))
+		(line (pt 192 32)(pt 176 32)(line_width 3))
 	)
 	(port
-		(pt 168 48)
-		(output)
-		(text "difficulty" (rect 0 0 33 12)(font "Arial" ))
-		(text "difficulty" (rect 114 43 147 55)(font "Arial" ))
-		(line (pt 168 48)(pt 152 48)(line_width 1))
-	)
-	(port
-		(pt 168 64)
+		(pt 192 48)
 		(output)
 		(text "won" (rect 0 0 15 12)(font "Arial" ))
-		(text "won" (rect 132 59 147 71)(font "Arial" ))
-		(line (pt 168 64)(pt 152 64)(line_width 1))
+		(text "won" (rect 156 43 171 55)(font "Arial" ))
+		(line (pt 192 48)(pt 176 48)(line_width 1))
+	)
+	(port
+		(pt 192 64)
+		(output)
+		(text "gameSpeed[2..0]" (rect 0 0 67 12)(font "Arial" ))
+		(text "gameSpeed[2..0]" (rect 104 59 171 71)(font "Arial" ))
+		(line (pt 192 64)(pt 176 64)(line_width 3))
+	)
+	(port
+		(pt 192 80)
+		(output)
+		(text "spaces[1..0]" (rect 0 0 47 12)(font "Arial" ))
+		(text "spaces[1..0]" (rect 124 75 171 87)(font "Arial" ))
+		(line (pt 192 80)(pt 176 80)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 152 96)(line_width 1))
+		(rectangle (rect 16 16 176 96)(line_width 1))
 	)
 )

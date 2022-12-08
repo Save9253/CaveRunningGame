@@ -61,23 +61,9 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 184 32)
 		(output)
-		(text "manPositionT" (rect 0 0 53 12)(font "Arial" ))
-		(text "manPositionT" (rect 110 27 163 39)(font "Arial" ))
-		(line (pt 184 32)(pt 168 32)(line_width 1))
-	)
-	(port
-		(pt 184 48)
-		(output)
-		(text "manPositionB" (rect 0 0 53 12)(font "Arial" ))
-		(text "manPositionB" (rect 110 43 163 55)(font "Arial" ))
-		(line (pt 184 48)(pt 168 48)(line_width 1))
-	)
-	(port
-		(pt 184 64)
-		(output)
 		(text "manHex[6..0]" (rect 0 0 54 12)(font "Arial" ))
-		(text "manHex[6..0]" (rect 109 59 163 71)(font "Arial" ))
-		(line (pt 184 64)(pt 168 64)(line_width 3))
+		(text "manHex[6..0]" (rect 109 27 163 39)(font "Arial" ))
+		(line (pt 184 32)(pt 168 32)(line_width 3))
 	)
 	(drawing
 		(rectangle (rect 16 16 168 128)(line_width 1))

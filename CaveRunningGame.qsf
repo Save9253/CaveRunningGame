@@ -112,20 +112,15 @@ set_location_assignment PIN_AA28 -to Hex5[1]
 set_location_assignment PIN_V25 -to Hex5[0]
 set_location_assignment PIN_Y16 -to jump
 set_location_assignment PIN_W15 -to duck
-set_location_assignment PIN_AD11 -to Spaces[1]
-set_location_assignment PIN_AF10 -to Spaces[0]
-set_location_assignment PIN_AB12 -to Speed[0]
-set_location_assignment PIN_AC12 -to Speed[1]
-set_location_assignment PIN_AF9 -to Speed[2]
 set_global_assignment -name VHDL_FILE GameStateControl.vhd
 set_global_assignment -name VHDL_FILE RunningText.vhd
 set_global_assignment -name VHDL_FILE SevenSegmentDispalyControl.vhd
 set_global_assignment -name VHDL_FILE Integer2digits.vhd
-set_location_assignment PIN_AD10 -to crash
 set_global_assignment -name VHDL_FILE ManControl.vhd
 set_global_assignment -name VHDL_FILE ManAnimation.vhd
 set_global_assignment -name BDF_FILE edge_detect.bdf
 set_location_assignment PIN_W21 -to Score[8]
 set_global_assignment -name VHDL_FILE crashDetect.vhd
-set_location_assignment PIN_Y21 -to crash2
+set_location_assignment PIN_AD10 -to crashEnable
+set_location_assignment PIN_Y21 -to debug
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

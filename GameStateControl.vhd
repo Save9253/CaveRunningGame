@@ -26,23 +26,23 @@ BEGIN
             runEnable <= '0';
             wonEnable <= '0';
             lostEnable <= '0';
-				gameState <= idleS;
+			gameState <= idleS;
         ELSIF (clk'EVENT AND clk = '1') THEN
-                if (gameState = idleS) then
-                    if (jump = '1' or duck = '1') then
-                        gameState <= runS;
-                        runEnable <= '1';
-                        idleEnable <= '0';
-                    end if;
-                elsif (gameState = runS) then
-                    if (crash = '1') then
-                        runEnable <= '0';
-                        lostEnable <= '1';
-                    elsif (won = '1') then
-                        runEnable <= '0';
-                        wonEnable <= '1';
-                    end if;
+            if (gameState = idleS) then
+                if (jump = '1' or duck = '1') then
+                    idleEnable <= '0';
+                    runEnable <= '1';
+                    gameState <= runS;
                 end if;
+            elsif (gameState = runS) then
+                if (crash = '1') then
+                    runEnable <= '0';
+                    lostEnable <= '1';
+                elsif (won = '1') then
+                    runEnable <= '0';
+                    wonEnable <= '1';
+                end if;
+            end if;
         END IF;
     END PROCESS;
 
