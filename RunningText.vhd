@@ -59,7 +59,7 @@ BEGIN
             hexMoveEnable <= '0';
             if (idleEnable = '1') then
                 if(count = 5)then
-                    -- we are using increasing the 100ms intervals to 1 second to make the running text slow enough to read
+                    -- we are increasing the 100ms intervals to 500ms second to make the running text slow enough to read
                     count <= 0;
                     case idleTextindex is
                         when 0 => newHex <= p;

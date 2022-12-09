@@ -113,7 +113,7 @@ refer to the applicable agreement for further details.
 	(input)
 	(rect -264 -320 -248 -152)
 	(text "INPUT" (rect 6 125 16 153)(font "Arial" (font_size 6))(vertical))
-	(text "crashEnable" (rect 6 5 18 66)(font "Arial" )(vertical))
+	(text "crashEnable" (rect 6 5 18 65)(font "Arial" )(vertical))
 	(pt 8 168)
 	(drawing
 		(line (pt 4 84)(pt 4 109))
@@ -245,22 +245,6 @@ refer to the applicable agreement for further details.
 		(line (pt 78 12)(pt 82 8))
 	)
 	(annotation_block (location)(rect 1448 1040 1520 1064))
-)
-(pin
-	(output)
-	(rect 568 48 744 64)
-	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "debug" (rect 90 0 119 12)(font "Arial" ))
-	(pt 0 8)
-	(drawing
-		(line (pt 0 8)(pt 52 8))
-		(line (pt 52 4)(pt 78 4))
-		(line (pt 52 12)(pt 78 12))
-		(line (pt 52 12)(pt 52 4))
-		(line (pt 78 4)(pt 82 8))
-		(line (pt 82 8)(pt 78 12))
-		(line (pt 78 12)(pt 82 8))
-	)
 )
 (symbol
 	(rect 48 440 208 552)
@@ -1083,28 +1067,28 @@ refer to the applicable agreement for further details.
 		(pt 192 32)
 		(output)
 		(text "score[9..0]" (rect 0 0 53 12)(font "Arial" ))
-		(text "score[9..0]" (rect 127 27 171 39)(font "Arial" ))
+		(text "score[9..0]" (rect 127 27 180 39)(font "Arial" ))
 		(line (pt 192 32)(pt 176 32)(line_width 3))
 	)
 	(port
 		(pt 192 48)
 		(output)
 		(text "won" (rect 0 0 18 12)(font "Arial" ))
-		(text "won" (rect 156 43 171 55)(font "Arial" ))
+		(text "won" (rect 156 43 174 55)(font "Arial" ))
 		(line (pt 192 48)(pt 176 48))
 	)
 	(port
 		(pt 192 64)
 		(output)
 		(text "gameSpeed[2..0]" (rect 0 0 83 12)(font "Arial" ))
-		(text "gameSpeed[2..0]" (rect 101 59 171 71)(font "Arial" ))
+		(text "gameSpeed[2..0]" (rect 101 59 184 71)(font "Arial" ))
 		(line (pt 192 64)(pt 176 64)(line_width 3))
 	)
 	(port
 		(pt 192 80)
 		(output)
 		(text "spaces[1..0]" (rect 0 0 61 12)(font "Arial" ))
-		(text "spaces[1..0]" (rect 120 75 171 87)(font "Arial" ))
+		(text "spaces[1..0]" (rect 120 75 181 87)(font "Arial" ))
 		(line (pt 192 80)(pt 176 80)(line_width 3))
 	)
 	(drawing
@@ -1187,7 +1171,7 @@ refer to the applicable agreement for further details.
 		(pt 184 32)
 		(output)
 		(text "manHex[6..0]" (rect 0 0 67 12)(font "Arial" ))
-		(text "manHex[6..0]" (rect 107 27 163 39)(font "Arial" ))
+		(text "manHex[6..0]" (rect 107 27 174 39)(font "Arial" ))
 		(line (pt 184 32)(pt 168 32)(line_width 3))
 	)
 	(drawing
@@ -1378,10 +1362,6 @@ refer to the applicable agreement for further details.
 (connector
 	(pt 208 240)
 	(pt 272 240)
-)
-(connector
-	(pt 208 256)
-	(pt 256 256)
 )
 (connector
 	(pt -56 -152)
@@ -1854,22 +1834,6 @@ refer to the applicable agreement for further details.
 	(pt 872 968)
 )
 (connector
-	(pt 568 56)
-	(pt 560 56)
-)
-(connector
-	(pt 560 56)
-	(pt 560 184)
-)
-(connector
-	(pt 648 184)
-	(pt 560 184)
-)
-(connector
-	(pt 560 184)
-	(pt 360 184)
-)
-(connector
 	(pt -16 600)
 	(pt 440 600)
 )
@@ -1957,6 +1921,14 @@ refer to the applicable agreement for further details.
 	(pt 680 600)
 	(bus)
 )
+(connector
+	(pt 360 184)
+	(pt 648 184)
+)
+(connector
+	(pt 208 256)
+	(pt 256 256)
+)
 (junction (pt -16 208))
 (junction (pt 8 224))
 (junction (pt -80 240))
@@ -1990,5 +1962,4 @@ refer to the applicable agreement for further details.
 (junction (pt 424 984))
 (junction (pt 8 952))
 (junction (pt -16 936))
-(junction (pt 560 184))
 (junction (pt 648 600))
